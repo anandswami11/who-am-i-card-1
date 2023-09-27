@@ -1,13 +1,15 @@
 
+let clickButtons = document.querySelectorAll('.button, button1');
+console.log('clickButtons', clickButtons);
 
-let clickButton = document.querySelector('.button')
+[...clickButtons].map(function (button) {
+    console.log('el', button);
 
-clickButton.addEventListener('click', function(){
-    // let user_nmae = prompt('whate is yuor name')
-    // document.querySelector('.name').innerHTML = user_nmae
-    document.querySelector('.box').style.display = 'flex'
-
-})
+    button.addEventListener('click', function () {
+        console.log('clicked on button')
+        document.querySelector('.box').style.display = 'flex'
+    })
+});
 
 let closeButton = document.querySelector('.close_button')
 
@@ -16,4 +18,3 @@ closeButton.addEventListener('click', function(){
     document.querySelector('.box').style.display = 'none'
 
 })
-
